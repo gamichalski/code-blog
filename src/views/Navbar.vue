@@ -5,13 +5,14 @@
         <span class="navbar-item">CodeBlog</span>
       </div>
       <div class="navbar-end">
-        <a class="navbar-item">
+        <router-link :to="{ name: 'Posts' }" class="navbar-item">
           Posts
-        </a>
+        </router-link>
+
         <div class="navbar-item">
-          <a class="button is-light">
+          <router-link :to="{ name: 'Posts/Novo' }" class="button is-light">
             Criar Post
-          </a>
+          </router-link>
         </div>
       </div>
     </div>

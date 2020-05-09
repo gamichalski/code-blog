@@ -4,7 +4,7 @@
       <div class="container">
         <div v-for="post in posts" :key="post.uuid">
           <section class="section">
-            <div class="columns">
+            <div class="columns has-clickable" @click="onClickPost(post.uuid)">
               <div class="column is-8 is-offset-2">
                 <div class="content is-medium">
                   <h2 class="subtitle is-4">{{ post.formatedCreatedAt }}</h2>
@@ -37,5 +37,19 @@ export default {
       this.isLoading = false;
     });
   },
+  methods: {
+    onClickPost(uuid) {
+      this.$router.push({ name: "Posts/Read", params: { uuid } });
+    },
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+.has-clickable {
+  cursor: pointer;
+}
+.hero {
+  min-height: 60vh;
+}
+</style>
