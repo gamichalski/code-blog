@@ -5,12 +5,20 @@
         <span class="navbar-item">CodeBlog</span>
       </div>
       <div class="navbar-end">
-        <router-link :to="{ name: 'Posts' }" class="navbar-item">
+        <router-link
+          :to="{ name: 'Posts' }"
+          class="navbar-item"
+          data-testid="posts"
+        >
           Posts
         </router-link>
 
         <div class="navbar-item">
-          <router-link :to="{ name: 'Posts/Novo' }" class="button is-light">
+          <router-link
+            :to="{ name: 'Posts/Novo' }"
+            class="button is-light"
+            data-testid="create-post"
+          >
             Criar Post
           </router-link>
         </div>
