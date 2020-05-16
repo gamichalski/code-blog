@@ -42,9 +42,13 @@ export default {
   methods: {
     ...mapActions("login", ["login"]),
     onClickLogin(user) {
-      this.login(user).then(() => {
-        this.$router.push({ name: "Posts" });
-      });
+      this.login(user)
+        .then(() => {
+          this.$router.push({ name: "Posts" });
+        })
+        .catch(() => {
+          this.user.password = "";
+        });
     }
   }
 };

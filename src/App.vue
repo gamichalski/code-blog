@@ -12,19 +12,22 @@
 $size: 40px;
 $position: 50%;
 
-.is-loading {
-  position: relative;
+div,
+section {
+  &.is-loading {
+    position: relative;
 
-  &::after {
-    @extend %loader;
-    position: absolute;
-    border-width: 5px;
-    width: $size;
-    height: $size;
-    top: $position;
-    left: $position;
-    margin-left: -$size / 2;
-    margin-top: -$size / 2;
+    &::after {
+      @extend %loader;
+      position: absolute;
+      border-width: 5px;
+      width: $size;
+      height: $size;
+      top: $position;
+      left: $position;
+      margin-left: -$size / 2;
+      margin-top: -$size / 2;
+    }
   }
 }
 </style>
