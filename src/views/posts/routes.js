@@ -6,18 +6,18 @@ export default [
   {
     path: "posts",
     name: "Posts",
-    component: Posts,
+    component: Posts
   },
   {
     path: "posts/novo",
     name: "Posts/Novo",
     component: CreatePost,
-    meta: { auth: true },
+    meta: { auth: true }
   },
   {
     path: "posts/:uuid",
     props: true,
     name: "Posts/Read",
-    component: ReadPost,
-  },
+    component: ReadPost
+  }
 ];

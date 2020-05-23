@@ -18,7 +18,12 @@
               </div>
             </div>
             <div class="control">
-              <button @click="onClickLogin(user)" class="button is-dark is-fullwidth">Entrar</button>
+              <button
+                @click="onClickLogin(user)"
+                class="button is-dark is-fullwidth"
+              >
+                Entrar
+              </button>
             </div>
           </div>
         </div>

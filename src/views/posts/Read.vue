@@ -11,17 +11,25 @@
                   v-if="isPermittedDelete"
                   class="button is-pulled-right is-danger"
                   :class="{ 'is-loading': isLoadingDelete }"
-                >Deletar</button>
+                >
+                  Deletar
+                </button>
                 <h1 class="title">{{ post.title }}</h1>
                 <span
                   class="is-size-7 is-pulled-right is-italic has-text-weight-bold"
-                >{{ post.userEmail }}</span>
+                  >{{ post.userEmail }}</span
+                >
                 <h1 class="subtitle is-4">{{ post.formatedCreatedAt }}</h1>
                 <div v-html="post.post"></div>
               </div>
               <div v-else-if="notFoundMessage" class="is-hcentered">
                 <span class="title is-3">{{ notFoundMessage }}</span>
-                <router-link class="button is-dark" :to="{ name:'Posts' }" replace>Voltar</router-link>
+                <router-link
+                  class="button is-dark"
+                  :to="{ name: 'Posts' }"
+                  replace
+                  >Voltar</router-link
+                >
               </div>
             </div>
           </div>

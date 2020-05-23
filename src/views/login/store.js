@@ -2,7 +2,7 @@ import { login } from "./services";
 
 const types = {
   LOGIN: "LOGIN",
-  LOGOUT: "LOGOUT",
+  LOGOUT: "LOGOUT"
 };
 
 export default {
@@ -14,7 +14,7 @@ export default {
     },
     [types.LOGOUT](state) {
       state.auth = null;
-    },
+    }
   },
   actions: {
     login({ commit }, user) {
@@ -24,7 +24,7 @@ export default {
     },
     logout({ commit }) {
       commit(types.LOGOUT);
-    },
+    }
   },
   getters: {
     isLogged(state) {
@@ -38,6 +38,6 @@ export default {
       const decodedPayload = global.atob(encodedPayload);
       const user = JSON.parse(decodedPayload)?.user;
       return user;
-    },
-  },
+    }
+  }
 };

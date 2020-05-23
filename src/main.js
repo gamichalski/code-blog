@@ -13,10 +13,10 @@ Vue.use(VueToast);
 
 Vue.config.productionTip = false;
 
-axios.interceptors.request.use(request, (error) => Promise.reject(error));
+axios.interceptors.request.use(request, error => Promise.reject(error));
 
 new Vue({
   router,
   store,
-  render: (h) => h(App),
+  render: h => h(App)
 }).$mount("#app");

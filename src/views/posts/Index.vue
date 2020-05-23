@@ -9,7 +9,8 @@
                 <div class="content is-medium">
                   <span
                     class="is-size-7 is-pulled-right is-italic has-text-weight-bold"
-                  >{{ post.userEmail }}</span>
+                    >{{ post.userEmail }}</span
+                  >
                   <h2 class="subtitle is-4">{{ post.formatedCreatedAt }}</h2>
                   <h1 class="title">{{ post.title }}</h1>
                 </div>
