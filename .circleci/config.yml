@@ -18,12 +18,9 @@ jobs:
 workflows:
   build-and-test:
     jobs:
-      - cypress/install
       - cypress/run:
           executor: cypress/browsers-chrome69
           browser: chrome
-          requires:
-            - cypress/install
           config: baseUrl=http://localhost:8080
           start: "npm run serve"
           wait-on: "http://localhost:8080"
