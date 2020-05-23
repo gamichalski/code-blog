@@ -62,9 +62,4 @@ describe("Login", () => {
 
     expect(wrapper.vm.user.password).toEqual("");
   });
-
-  it("Deve ter um snapshot igual", () => {
-    const wrapper = factory();
-    expect(wrapper.html()).toMatchSnapshot();
-  });
 });
