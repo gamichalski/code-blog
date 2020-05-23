@@ -18,12 +18,7 @@
               </div>
             </div>
             <div class="control">
-              <button
-                @click="onClickLogin(user)"
-                class="button is-dark is-fullwidth"
-              >
-                Entrar
-              </button>
+              <button @click="onClickLogin(user)" class="button is-dark is-fullwidth">Entrar</button>
             </div>
           </div>
         </div>
@@ -47,7 +42,7 @@ export default {
   methods: {
     ...mapActions("login", ["login"]),
     onClickLogin(user) {
-      this.login(user)
+      return this.login(user)
         .then(() => {
           this.$router.push({ name: "Posts" });
         })
